@@ -1,28 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route} from 'react-router-dom';
-import Navigation from './components/Navigation';
+import { BrowserRouter,  Route, Switch} from 'react-router-dom';
+import UserDatabase from './components/UserDatabase';
+import UserCreation from './components/UserCreation';
+import NotFoundPage from './components/NotFoundPage';
 import 'normalize.css/normalize.css';
 import './styles/styles.css';
-
 
 
 class AdminApp extends React.Component {
      render() {
           return (
                <div className="admin-app">
-                    <Navigation />
-               </div>
-          )
-     }
-}
-
-class UserDatabase extends React.Component {
-     render() {
-          return (
-               <div className="user-database">
-                    <h1>This is a user database</h1>
-                    
+                    <h1>Front page</h1>
                </div>
           )
      }
@@ -30,10 +20,12 @@ class UserDatabase extends React.Component {
 
 const routes = (
      <BrowserRouter>
-          <div>
+          <Switch>
                <Route path="/" component={AdminApp} exact={true} />
                <Route path="/userdatabase" component={UserDatabase} />
-          </div>
+               <Route path="/usercreation" component={UserCreation} />
+               <Route component={NotFoundPage} />
+          </Switch>
      </BrowserRouter>
 );
 

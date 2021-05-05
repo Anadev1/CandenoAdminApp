@@ -1,17 +1,17 @@
 import React from 'react';
 import Navigation from './Navigation';
 
-class UserDatabase extends React.Component {
+class UserCreation extends React.Component {
      render() {
           return (
                <div className="content">
                     <Navigation />
-                    <div className="user-database">
-                         <h1>This is a user database</h1>
+                    <div className="user-creation">
+                         <h1>This is user creation</h1>
                     </div>
                </div>     
           )
      }
 }
 
-export default UserDatabase;
+export default UserCreation;
