@@ -22,6 +22,7 @@ class UserDatabase extends React.Component {
           return (
                <div className="user-database">
                     <h1>This is a user database</h1>
+                    
                </div>
           )
      }

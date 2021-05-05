@@ -18,11 +18,20 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                ]
-               }]
+          }, {
+               loader: 'url-loader',
+               test: /\.(jpg|png)$/
+               
+          }, {
+               loader: 'svg-url-loader',
+               options: {
+                    limit: 10000,
+               },
+               test: /\.svg$/
+          }]
      },
      devtool: 'cheap-module-eval-source-map',
      devServer: {
-          contentBase: path.join(__dirname, 'public'),
-          historyApiFallback: true
+          contentBase: path.join(__dirname, 'public')
      }
 };
