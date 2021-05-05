@@ -6,7 +6,7 @@ import './styles/styles.css';
 class AdminApp extends React.Component {
      render() {
           return (
-               <div>
+               <div className="admin-app">
                     <Navigation />
                </div>
           )

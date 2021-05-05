@@ -4,9 +4,9 @@ class Navigation extends React.Component {
      render() {
           console.log('tesdst');
           return (
-               <div>
+               <div className="navigation">
                     <img src='' alt="logo"></img>
-                    <p>Navigation</p>
+                    <h1>Navigation</h1>
                </div>
           )
      }
