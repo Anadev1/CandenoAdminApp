@@ -6,8 +6,8 @@ class UserDatabase extends React.Component {
           return (
                <div className="content">
                     <Navigation />
-                    <div className="main-container user-database">
-                         <h1>This is a user database</h1>
+                    <div className="main-container">
+                         <h1 className="page-title">This is a user database</h1>
                     </div>
                </div>     
           )

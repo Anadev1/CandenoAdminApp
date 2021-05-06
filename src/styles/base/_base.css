@@ -7,6 +7,15 @@ body {
      font-size: 1.6rem;
 }
 
+:root {
+     --primary: #1C47BD;
+     --ligh-blue: #446DFF;
+     --lighter-blue: #6B85CD;
+     --white: #f3f3f3;
+     --cta: #5DC090;
+     --accent-blue: #3BA2B9;
+}
+
 .content {
      display: flex;
      flex-direction: row;
@@ -15,6 +24,9 @@ body {
 
 .main-container {
      width: 85vw;
-     background: green;
-     text-align: center;
+}
+
+.page-title {
+     margin-top: 7rem;
+     margin-left: 15rem;
 }

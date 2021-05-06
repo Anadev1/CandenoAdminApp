@@ -12,10 +12,13 @@ import './styles/styles.css';
 class AdminApp extends React.Component {
      render() {
           return (
-               <div className=" main-container admin-app">
+               <div className="content">
                     <Navigation />
-                    <h1>Front page</h1>
+                    <div className=" main-container">
+                         <h1 className="page-title">Front page</h1>
+                    </div>
                </div>
+               
           )
      }
 }
