@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter,  Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Navigation from './components/Navigation';
 import UserDatabase from './components/UserDatabase';
 import UserCreation from './components/UserCreation';
 import NotFoundPage from './components/NotFoundPage';
@@ -11,7 +12,8 @@ import './styles/styles.css';
 class AdminApp extends React.Component {
      render() {
           return (
-               <div className="admin-app">
+               <div className=" main-container admin-app">
+                    <Navigation />
                     <h1>Front page</h1>
                </div>
           )

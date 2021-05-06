@@ -6,7 +6,7 @@ class UserCreation extends React.Component {
           return (
                <div className="content">
                     <Navigation />
-                    <div className="user-creation">
+                    <div className="main-container user-creation">
                          <h1>This is user creation</h1>
                     </div>
                </div>     

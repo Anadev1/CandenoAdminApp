@@ -6,3 +6,15 @@ body {
      font-family: 'Metropolis', 'Helvetica', 'Arial', sans-serif;
      font-size: 1.6rem;
 }
+
+.content {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+
+.main-container {
+     width: 85vw;
+     background: green;
+     text-align: center;
+}
