@@ -26,7 +26,13 @@ body {
      width: 85vw;
 }
 
+.page-header {
+     display: flex;
+     align-items: center;
+     padding-top: 5rem;
+     padding-left: 15rem;
+}
+
 .page-title {
-     margin-top: 7rem;
-     margin-left: 15rem;
+     margin-right: 7rem;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import MainCta from './MainCta';
 import Navigation from './Navigation';
 
 class UserDatabase extends React.Component {
@@ -7,7 +8,15 @@ class UserDatabase extends React.Component {
                <div className="content">
                     <Navigation />
                     <div className="main-container">
-                         <h1 className="page-title">This is a user database</h1>
+                         <div className="page-header">
+                              <h1 className="page-title">Users</h1>
+                              <MainCta title="Create User" />
+                         </div>
+
+                         <div className="database-container">
+                              
+                         </div>
+                         
                     </div>
                </div>     
           )
