@@ -1,26 +1,59 @@
 import React from 'react';
-import MainCta from './MainCta';
-import Navigation from './Navigation';
+import firebase from "../firebase/firebase";
 
-class UserDatabase extends React.Component {
-     render() {
-          return (
-               <div className="content">
-                    <Navigation />
-                    <div className="main-container">
-                         <div className="page-header">
-                              <h1 className="page-title">Users</h1>
-                              <MainCta title="Create User" />
-                         </div>
+class User extends React.Component {
 
-                         <div className="database-container">
-                              
-                         </div>
-                         
-                    </div>
-               </div>     
-          )
+     constructor() {
+          super();
+          this.state = {
+               email: " ",
+               fullname: " "
+          }
+     }
+
+     updateInput = (e) => {
+          this.setState({
+          [e.target.name]: e.target.value
+          });
+     }
+
+     addUser = (e) => {
+          e.preventDefault();
+          const db = firebase.firestore();
+          db.settings({
+               timestampsInSnapshots: true
+          });
+          const userRef = db.collection("users").add({
+               fullname: this.state.fullname,
+               email: this.state.email
+          });  
+          this.setState({
+               fullname: " ",
+               email: " "
+          });
+     };
+
+  render() {
+    return (
+         <form onSubmit={this.addUser}>
+               <input
+                    type="text"
+                    name="fullname"
+                   placeholder="Full name"
+                   onChange={this.updateInput}
+                   value={this.state.fullname}
+               />
+               <input
+                    type="email"
+                    name="email"
+                   placeholder="Full name"
+                   onChange={this.updateInput}
+                   value={this.state.email}
+               />
+               <button type="submit">Submit</button>
+          </form>
+          );
      }
 }
-
-export default UserDatabase;
+     
+export default User;
